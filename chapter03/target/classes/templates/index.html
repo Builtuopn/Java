@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <title> </title>
+</head>
+<body>
+ 	<table border="1">
+ 		<tr>
+ 			<td>用户的id</td>
+ 			<td>用户名</td>
+ 			<td>密码</td>
+ 			<td>操作</td>
+ 		</tr>
+ 			<tr th:each="user:${userAll}">
+ 			<td th:text=${user.id}></td>
+ 			<td th:text=${user.username}></td>
+ 			<td th:text=${user.paswword}></td>
+ 			<td><a href="https://builtuopn.github.io">修改</a> <a>删除</a> </td>
+ 			
+ 			<td>
+ 				<!-- th:href="@"{/方法名(属性=${属性值})} -->
+ 				<a th:href="@{/delete(id=${user.id})}"></a>
+ 			</td>
+ 		</tr>
+ 	</table>
+</body>
+</html>
+

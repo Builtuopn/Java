@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: BuBu-nopu
+Build-Jdk: 15.0.1
+Implementation-Title: chapter03
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.itheima
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/chapter03
+Created-By: Maven Integration for Eclipse
+

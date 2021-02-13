@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <title>用户登录界面</title>
+</head>
+<body class="text-center">
+<!--  用户登录form表单 -->
+<span th:each="student : ${list}">
+	<span th:text="${student.sid}"></span>
+</span>
+ <table border="1px">
+ 	<tr>
+ 		<td>学生姓名</td>
+ 		<td>手机号码</td>
+ 		<td>地址</td>
+ 		<td>年龄</td>
+ 		<td>操作</td>
+ 	</tr>
+ 	<tr  th:each="student1:${student}">
+ 		<td th:text="${student1.sname}"></td>
+ 		<td th:text="${student1.phone}"></td>
+ 		<td th:text="${student1.address}"></td>
+ 		<td th:text="${student1.age}"></td>
+ 		<td> 
+ 			<a th:href="@{/updateInfo(id=${student1.sid})}">修改</a>
+ 			<button>删除</button>
+ 		</td>
+ 	</tr>
+ </table>
+</body>
+</html>
+
